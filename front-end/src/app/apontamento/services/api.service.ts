@@ -20,7 +20,7 @@ export class ApiService {
   }
   constructor(private http: HttpClient) { }
 
-  createApontamento(postData: { story_id: string; data_apto: string; vlr_apto: number; }): Observable<any> {
+  createApontamento(postData: { story_id: string; data_apto: Date; vlr_apto: number; }): Observable<any> {
     return this.http.post(this.baseURL, postData)
       .pipe(
         tap(() => {
@@ -29,7 +29,7 @@ export class ApiService {
       );
   }
 
-  updateApontamento(id: number | undefined, value: { story_id: string; data_apto: string; vlr_apto: number; }): Observable<any> {
+  updateApontamento(id: number | undefined, value: { story_id: string; data_apto: Date; vlr_apto: number; }): Observable<any> {
     return this.http.put(this.baseURL + id + '/', value)
       .pipe(
         tap(() => {

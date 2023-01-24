@@ -5,11 +5,11 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'apontamento',
+    redirectTo: 'Apontamentos',
     pathMatch: 'full'
   },
   {
-    path: 'apontamento',
+    path: 'Apontamentos',
     component: ApontamentoComponent
   }
 
